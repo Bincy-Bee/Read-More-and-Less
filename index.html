@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Skill Bar</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/fontcss.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="box">
+                <h2>Product Title</h2>
+                <div class="descriptionBox">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore est, aliquid dolor nemo deleniti temporibus rem porro odio libero sit quisquam, possimus consequatur nihil dignissimos officia earum optio animi. Voluptatum pariatur quisquam enim cum labore dolores sunt aliquid tenetur blanditiis incidunt laborum, veniam placeat ea beatae quo necessitatibus doloribus eaque sit repellendus deleniti error cumque. Eveniet obcaecati non maxime eos repellat nulla. Beatae dolore aliquid dolorum nesciunt tempora quo cum! Molestiae, fugit perspiciatis maiores, enim, porro voluptate quos perferendis corporis fuga fugiat dolorem saepe mollitia est illo non labore! Omnis id quis odio quam! A, animi praesentium. Quis, dolorem.</p>
+                    <button type="button">Read More</button>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Product Title</h2>
+                <div class="descriptionBox">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore est, aliquid dolor nemo deleniti temporibus rem porro odio libero sit quisquam, possimus consequatur nihil dignissimos officia earum optio animi. Voluptatum pariatur quisquam enim cum labore dolores sunt aliquid tenetur blanditiis incidunt laborum, veniam placeat ea beatae quo necessitatibus doloribus eaque sit repellendus deleniti error cumque. Eveniet obcaecati non maxime eos repellat nulla. Beatae dolore aliquid dolorum nesciunt tempora quo cum! Molestiae, fugit perspiciatis maiores, enim, porro voluptate quos perferendis corporis fuga fugiat dolorem saepe mollitia est illo non labore! Omnis id quis odio quam! A, animi praesentium. Quis, dolorem.</p>
+                    <button type="button">Read More</button>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Product Title</h2>
+                <div class="descriptionBox">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore est, aliquid dolor nemo deleniti temporibus rem porro odio libero sit quisquam, possimus consequatur nihil dignissimos officia earum optio animi. Voluptatum pariatur quisquam enim cum labore dolores sunt aliquid tenetur blanditiis incidunt laborum, veniam placeat ea beatae quo necessitatibus doloribus eaque sit repellendus deleniti error cumque. Eveniet obcaecati non maxime eos repellat nulla. Beatae dolore aliquid dolorum nesciunt tempora quo cum! Molestiae, fugit perspiciatis maiores, enim, porro voluptate quos perferendis corporis fuga fugiat dolorem saepe mollitia est illo non labore! Omnis id quis odio quam! A, animi praesentium. Quis, dolorem.</p>
+                    <button type="button">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    let descBox = document.querySelectorAll(".descriptionBox");
+    
+    descBox.forEach(element => {
+        let btn  = element.querySelector("button");
+        btn.onclick = function(){
+            element.classList.toggle("active");
+            btn.classList.toggle("activebtn");
+            if(btn.classList.contains("activebtn")){
+                btn.innerHTML = "Read Less"
+            }
+            else{
+                btn.innerHTML = "Read More"
+            }
+        }
+    });
+</script>
+</html>
